@@ -132,4 +132,4 @@ except EOFError:
     # Handle EOFError (common in mobile environments like PyDroid)
     # This ensures the program doesn't crash when `input()` fails due to no standard input stream.
     # It provides a graceful fallback so the script can default to "view plot" without breaking.
-    choice = "v"
+    plt.show()
