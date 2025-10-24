@@ -119,12 +119,17 @@ if error_data:
 # -----------------------------------------------------
 # Prompt the user to either display the plot or save it as an image file.
 # This section allows flexibility when running the script from a terminal.
+try:
+    choice = input("Would you like to view or save the plot? (v/s): ").strip().lower()
 
-choice = input("Would you like to view or save the plot? (v/s): ").strip().lower()
-
-if choice == 'v':
-    plt.show()
-elif choice == 's':
-    save_plot(fig, "weather_data.png")
-else:
-    print("\nInvalid input. The plot will not be displayed or saved.")
+    if choice == 'v':
+        plt.show()
+    elif choice == 's':
+        save_plot(fig, "weather_data.png")
+    else:
+        print("\nInvalid input. The plot will not be displayed or saved.")
+except EOFError:
+    # Handle EOFError (common in mobile environments like PyDroid)
+    # This ensures the program doesn't crash when `input()` fails due to no standard input stream.
+    # It provides a graceful fallback so the script can default to "view plot" without breaking.
+    choice = "v"
