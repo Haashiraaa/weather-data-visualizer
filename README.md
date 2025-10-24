@@ -15,19 +15,19 @@ This README documents the current version of the project (no refactor). It descr
 ## Clone the repository
 Clone via HTTPS:
 ```
-git clone https://github.com/Haashiraaa/weather-data-visualizer.git
+git clone https://github.com/Haashiraaa/weather-data-visualizer.git<br>
 cd weather-data-visualizer
 ```
 
 Clone via SSH:
 ```
-git clone git@github.com:Haashiraaa/weather-data-visualizer.git
+git clone git@github.com:Haashiraaa/weather-data-visualizer.git<br>
 cd weather-data-visualizer
 ```
 
 To check out the exact commit referenced in this README (optional):
 ```
-git fetch --all
+git fetch --all<br>
 git checkout 0cccda1dc4f4928b25e1cd2594b265da14f59285
 ```
 (or clone normally and use `git checkout <commit-sha>` after `cd`-ing into the repo.)
